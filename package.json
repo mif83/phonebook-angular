@@ -1,0 +1,24 @@
+{
+  "name": "Phonebook_AngularJS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "node node_modules/.bin/webpack-dev-server --content-base src/app",
+    "build": "NODE_ENV=production node node_modules/.bin/webpack && cp src/app/index.html dist/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.4"
+  }
+}
