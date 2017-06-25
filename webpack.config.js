@@ -28,14 +28,14 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
-const extractLESS = new ExtractTextPlugin('../../dist/css/[name].css');
+const extractLESS = new ExtractTextPlugin('../../docs/css/[name].css');
 
 
 module.exports = {
     context: __dirname + '/src/app',
     entry: './main.js',
     output:{
-        path: __dirname + '/dist/js',
+        path: __dirname + '/docs/js',
         filename:'bundle.js'
     },
     module: {
