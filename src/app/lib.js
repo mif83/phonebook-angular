@@ -23,7 +23,7 @@ app.factory('myFactory', function () {
                 name:"Бонопарт",
                 surname:"Наполеон",
                 email:"imperator@yahoo.com",
-                phone:"+38099333555666",
+                phone:"+380993335556",
                 info:""
             }
         ],

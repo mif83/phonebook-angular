@@ -7,10 +7,12 @@
 body,html{
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 .phonebook-wrapper{
   margin: 0 auto;
-  width: 500px;
+  max-width: 500px;
   min-height: 100px;
   background-color: @background-blue;
   position: relative;
@@ -18,6 +20,33 @@ body,html{
 }
 .phonebook-title{
   text-align: center;
+}
+// button
+.btn{
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  color:#fff;
+  text-decoration: none;
+  &--delete{
+    background-color: @text-color-red;
+    &:hover{
+      background-color: lighten(@text-color-red, 20%);
+    }
+  }
+  &--change{
+    background-color: @background-dark-blue;
+    &:hover{
+      background-color: lighten(@background-dark-blue, 20%);
+    }
+  }
+  &--save{
+    background-color: @background-dark-blue;
+    &:hover{
+      background-color: lighten(@background-dark-blue, 20%);
+    }
+  }
 }
 // search
 .search-wrapper{
@@ -27,6 +56,9 @@ body,html{
 .search-field{
   padding: 5px 10px;
   width: 87%;
+  @media (max-width: 320px){
+    width: 80%;
+  }
 }
 .button-new-person{
   display: block;
@@ -78,11 +110,17 @@ body,html{
     &:hover{
       background-color: lighten(@background-blue, 20%);
     }
+    @media (max-width: 320px){
+      padding: 10px 5px;
+    }
   }
   &-item__phone{
     position: absolute;
     right: 20px;
     color: lighten(@text-color-black, 20%);
+    @media (max-width: 320px){
+      right:5px;
+    }
   }
 }
 
@@ -90,6 +128,9 @@ body,html{
 
 .person-wrapper{
   padding: 10px 20px;
+  @media (max-width: 320px){
+    padding: 10px 5px;
+  }
 }
 
 .person-link-home{
@@ -118,40 +159,22 @@ body,html{
   right:20px;
   top:50%;
   transform: translateY(-50%);
+  @media (max-width: 320px){
+    right:0;
+  }
+
 }
 .person-label-title{
   color: lighten(@text-color-black, 40%);
 }
-.btn{
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 20px;
-  border-radius: 5px;
-  color:#fff;
-  text-decoration: none;
-  &--delete{
-    background-color: @text-color-red;
-    &:hover{
-      background-color: lighten(@text-color-red, 20%);
-    }
-  }
-  &--change{
-    background-color: @background-dark-blue;
-    &:hover{
-      background-color: lighten(@background-dark-blue, 20%);
-    }
-  }
-  &--save{
-    background-color: @background-dark-blue;
-    &:hover{
-      background-color: lighten(@background-dark-blue, 20%);
-    }
-  }
-}
+
 
 //change person
 .change-person-wrapper{
   padding: 10px 20px;
+  @media (max-width: 320px){
+    padding: 10px 5px;
+  }
 }
 .change-person-link-home{
   text-decoration: none;

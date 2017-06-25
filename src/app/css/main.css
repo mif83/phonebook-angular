@@ -2,16 +2,44 @@ body,
 html {
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
 }
 .phonebook-wrapper {
   margin: 0 auto;
-  width: 500px;
+  max-width: 500px;
   min-height: 100px;
   background-color: #36d1fe;
   position: relative;
 }
 .phonebook-title {
   text-align: center;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+.btn--delete {
+  background-color: #df0000;
+}
+.btn--delete:hover {
+  background-color: #ff4646;
+}
+.btn--change {
+  background-color: #0005df;
+}
+.btn--change:hover {
+  background-color: #464aff;
+}
+.btn--save {
+  background-color: #0005df;
+}
+.btn--save:hover {
+  background-color: #464aff;
 }
 .search-wrapper {
   position: relative;
@@ -20,6 +48,11 @@ html {
 .search-field {
   padding: 5px 10px;
   width: 87%;
+}
+@media (max-width: 320px) {
+  .search-field {
+    width: 80%;
+  }
 }
 .button-new-person {
   display: block;
@@ -65,13 +98,28 @@ html {
 .phonebook-link:hover {
   background-color: #9be8ff;
 }
+@media (max-width: 320px) {
+  .phonebook-link {
+    padding: 10px 5px;
+  }
+}
 .phonebook-item__phone {
   position: absolute;
   right: 20px;
   color: #333333;
 }
+@media (max-width: 320px) {
+  .phonebook-item__phone {
+    right: 5px;
+  }
+}
 .person-wrapper {
   padding: 10px 20px;
+}
+@media (max-width: 320px) {
+  .person-wrapper {
+    padding: 10px 5px;
+  }
 }
 .person-link-home {
   text-decoration: none;
@@ -100,37 +148,21 @@ html {
   top: 50%;
   transform: translateY(-50%);
 }
+@media (max-width: 320px) {
+  .person-img {
+    right: 0;
+  }
+}
 .person-label-title {
   color: #666666;
 }
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-right: 20px;
-  border-radius: 5px;
-  color: #fff;
-  text-decoration: none;
-}
-.btn--delete {
-  background-color: #df0000;
-}
-.btn--delete:hover {
-  background-color: #ff4646;
-}
-.btn--change {
-  background-color: #0005df;
-}
-.btn--change:hover {
-  background-color: #464aff;
-}
-.btn--save {
-  background-color: #0005df;
-}
-.btn--save:hover {
-  background-color: #464aff;
-}
 .change-person-wrapper {
   padding: 10px 20px;
+}
+@media (max-width: 320px) {
+  .change-person-wrapper {
+    padding: 10px 5px;
+  }
 }
 .change-person-link-home {
   text-decoration: none;

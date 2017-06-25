@@ -2,6 +2,9 @@
 <html lang="en" ng-app="phonebook">
 <head>
     <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Phonebook</title>
     <script src="bundle.js"></script>
     <link rel="stylesheet" href="css/main.css">
@@ -9,7 +12,7 @@
 <body>
 <button class="clear-localstorage" onclick="localStorage.clear(); location='/'" style="padding: 5px">Очистить localstorage</button>
 <div class="phonebook-wrapper">
-    <h2 class="phonebook-title">Менеджер Контактов</h2>
+    <h2 class="phonebook-title">Контакты</h2>
     <ng-view></ng-view>
 </div>
 
