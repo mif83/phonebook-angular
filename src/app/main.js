@@ -3,7 +3,7 @@ import {} from './directives/phonebook/phonebook';
 import {} from './directives/search/search';
 import {} from './directives/person/person';
 import {} from './directives/change-person/change-person';
-
+import './css/main.less';
 
 app.config(function ($routeProvider) {
     $routeProvider
