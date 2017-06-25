@@ -1,0 +1,11 @@
+<a href="/">Home</a>
+<div ng-show="person">
+    <span>Фамилия и имя: </span>{{person.name + " " + person.surname}}
+    <br>
+    <span>Email: {{person.email}}</span>
+    <br>
+    <span>Phone: {{person.phone}}</span>
+    <br>
+    <span>Info: {{person.info}}</span>
+</div>
+<h3 ng-hide="person">Нет такого контакта</h3>

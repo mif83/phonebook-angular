@@ -1,1 +1,7 @@
-{{ vm.hi}}<br>
+<ol>
+    <li ng-repeat="person in myFactory.phonebook | filter:myFactory.searchData" ng-click="choosePerson(person)">
+        <a href="#!/person/{{getGlobalIndex(person)}}">{{person.surname + " " + person.name}}</a>
+
+        <button ng-click="deletePerson(person)">Удалить</button>
+    </li>
+</ol>
