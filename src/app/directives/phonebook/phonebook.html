@@ -1,7 +1,7 @@
 <ol>
-    <li ng-repeat="person in myFactory.phonebook | filter:myFactory.searchData" ng-click="choosePerson(person)">
+    <li ng-repeat="person in myFactory.phonebook | filter:myFactory.searchData track by $index">
         <a href="#!/person/{{getGlobalIndex(person)}}">{{person.surname + " " + person.name}}</a>
 
-        <button ng-click="deletePerson(person)">Удалить</button>
+
     </li>
 </ol>

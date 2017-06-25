@@ -10,10 +10,6 @@ function searchPerson () {
         },
         controller: function($scope, myFactory){
             $scope.myFactory = myFactory;
-            $scope.createPerson = function(){
-                console.log("создать контакт");
-            }
-
         }
     }
 }

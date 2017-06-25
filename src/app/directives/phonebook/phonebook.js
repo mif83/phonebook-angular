@@ -9,22 +9,13 @@ function phoneBook () {
 
         },
         controller: function($scope, myFactory, $location){
+            if (localStorage.phonebook){
+                myFactory.phonebook = JSON.parse(localStorage.phonebook);
+            }
+
             $scope.myFactory = myFactory;
+            myFactory.currentId = -1;
 
-            $scope.deletePerson = function (person){
-                // удаление записи
-                myFactory.phonebook = myFactory.phonebook.filter(item => item !== person);
-                myFactory.currentPersonId = -1;
-
-            };
-            $scope.choosePerson = function (person) {
-
-                myFactory.phonebook.forEach( (item, i) => {
-                    if (item === person){
-                        myFactory.currentPersonId = i;
-                    }
-                })
-            };
             $scope.getGlobalIndex = function(person){
                 let personIndex;
                 myFactory.phonebook.forEach( (item, i) => {

@@ -1,0 +1,30 @@
+<a href="/">Home</a>
+
+<form>
+    <div>
+        <label > Введите имя:
+            <input type="text" placeholder="имя" ng-model="name">
+        </label>
+    </div>
+    <div>
+        <label >Введите фамилию:
+            <input type="text" placeholder="фамилия" ng-model="surname">
+        </label>
+    </div>
+    <div>
+        <label >Введите номер телефона:
+            <input type="text" placeholder="номер телефона" ng-model="phone">
+        </label>
+    </div>
+    <div>
+        <label >Введите email:
+            <input type="text" placeholder="email" ng-model="email">
+        </label>
+    </div>
+    <div>
+        <label>Заметки:
+            <input type="text" placeholder="заметки" ng-model="info">
+        </label>
+    </div>
+<button ng-click="save()">Сохранить</button>
+</form>

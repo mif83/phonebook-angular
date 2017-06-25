@@ -31,7 +31,7 @@ app.factory('myFactory', function () {
                 info:""
             }
         ],
-        currentPersonId:-1,
+        currentId:-1
     }
 });
 
