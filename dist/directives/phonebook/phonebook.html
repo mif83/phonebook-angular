@@ -1,0 +1,10 @@
+<ul class="phonebook-list">
+    <li class="phonebook-item" ng-repeat="person in myFactory.phonebook | filter:myFactory.searchData track by $index">
+        <a class="phonebook-link" href="#!/person/{{getGlobalIndex(person)}}">
+            <span class="phonebook-item__number">{{1+$index}}</span>
+            {{person.surname + " " + person.name}}
+            <span class="phonebook-item__phone">&#9990; {{person.phone}}</span>
+        </a>
+
+    </li>
+</ul>

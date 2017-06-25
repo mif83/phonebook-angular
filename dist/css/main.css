@@ -1,0 +1,188 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.phonebook-wrapper {
+  margin: 0 auto;
+  max-width: 500px;
+  min-height: 100px;
+  background-color: #36d1fe;
+  position: relative;
+}
+.phonebook-title {
+  text-align: center;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+.btn--delete {
+  background-color: #df0000;
+}
+.btn--delete:hover {
+  background-color: #ff4646;
+}
+.btn--change {
+  background-color: #0005df;
+}
+.btn--change:hover {
+  background-color: #464aff;
+}
+.btn--save {
+  background-color: #0005df;
+}
+.btn--save:hover {
+  background-color: #464aff;
+}
+.search-wrapper {
+  position: relative;
+  padding: 0 20px;
+}
+.search-field {
+  padding: 5px 10px;
+  width: 87%;
+}
+@media (max-width: 320px) {
+  .search-field {
+    width: 80%;
+  }
+}
+.button-new-person {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: #0005df;
+}
+.button-new-person:hover {
+  color: #000;
+  background-color: #464aff;
+}
+.phonebook-list {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+.phonebook-item:last-child .phonebook-link {
+  border-bottom: none;
+}
+.phonebook-item__number {
+  color: #df0000;
+  margin-right: 10px;
+}
+.phonebook-link {
+  padding: 10px 20px;
+  background-color: #36d1fe;
+  text-decoration: none;
+  display: block;
+  box-sizing: border-box;
+  border-bottom: 1px solid #808080;
+  color: #000000;
+}
+.phonebook-link:hover {
+  background-color: #9be8ff;
+}
+@media (max-width: 320px) {
+  .phonebook-link {
+    padding: 10px 5px;
+  }
+}
+.phonebook-item__phone {
+  position: absolute;
+  right: 20px;
+  color: #333333;
+}
+@media (max-width: 320px) {
+  .phonebook-item__phone {
+    right: 5px;
+  }
+}
+.person-wrapper {
+  padding: 10px 20px;
+}
+@media (max-width: 320px) {
+  .person-wrapper {
+    padding: 10px 5px;
+  }
+}
+.person-link-home {
+  text-decoration: none;
+  font-size: 36px;
+  position: absolute;
+  top: -5px;
+  color: #000000;
+}
+.person-link-home:hover {
+  color: #666666;
+}
+.person-info-wrapper {
+  position: relative;
+}
+.person-label-wrapper {
+  margin: 14px 0;
+}
+.person-img {
+  display: block;
+  position: absolute;
+  max-width: 130px;
+  max-height: 130px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px grey;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 320px) {
+  .person-img {
+    right: 0;
+  }
+}
+.person-label-title {
+  color: #666666;
+}
+.change-person-wrapper {
+  padding: 10px 20px;
+}
+@media (max-width: 320px) {
+  .change-person-wrapper {
+    padding: 10px 5px;
+  }
+}
+.change-person-link-home {
+  text-decoration: none;
+  font-size: 36px;
+  position: absolute;
+  top: -5px;
+  color: #000000;
+}
+.change-person-link-home:hover {
+  color: #666666;
+}
+.change-person-label-wrapper {
+  margin: 14px 0;
+}
+.change-person-label-wrapper label {
+  color: #666666;
+}
+.change-person-input {
+  padding: 5px 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}

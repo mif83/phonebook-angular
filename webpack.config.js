@@ -5,7 +5,7 @@ module.exports = {
     context: __dirname + '/src/app',
     entry: './main.js',
     output:{
-        path: __dirname + '/src/app',
+        path: __dirname + '/src/app/js',
         filename:'bundle.js'
     },
     module: {
@@ -25,6 +25,8 @@ module.exports = {
     ]
 };*/
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 const extractLESS = new ExtractTextPlugin('../../dist/css/[name].css');
 
@@ -41,10 +43,25 @@ module.exports = {
             {
                 test: /\.less$/i,
                 use: extractLESS.extract([ 'css-loader', 'less-loader' ])
-            },
+            }
         ]
     },
     plugins: [
-        extractLESS
+        extractLESS,
+        new CopyWebpackPlugin([
+            {
+                from: './index.html',
+                to:'../'
+            },
+            {
+                from: './directives',
+                to:'../directives'
+            }
+        ],
+            {
+                ignore: [
+                    '*.js',
+                ]
+            })
     ]
 };
