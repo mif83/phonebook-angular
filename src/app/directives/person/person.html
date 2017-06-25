@@ -1,14 +1,29 @@
-<a href="/">Home</a>
-<div ng-show="person">
-    <span>Имя и фамилия: </span>{{person.name + " " + person.surname}}
-    <br>
-    <span>Email: {{person.email}}</span>
-    <br>
-    <span>Phone: {{person.phone}}</span>
-    <br>
-    <span>Info: {{person.info}}</span>
-    <br>
-    <button ng-click="deletePerson()">Удалить</button>
-    <a href="#!/change">Изменить</a>
+<div class="person-wrapper">
+    <a class="person-link-home" href="/" title="К списку контактов">&#8678;</a>
+    <div class="person-info-wrapper" ng-show="person">
+        <div class="person-label-wrapper">
+            <span class="person-label-title">Имя: </span>{{person.name}}
+        </div>
+        <div class="person-label-wrapper">
+            <span class="person-label-title">Фамилия: </span>{{person.surname}}
+        </div>
+        <div class="person-label-wrapper">
+            <span class="person-label-title">Email: </span>{{person.email}}
+        </div>
+        <div class="person-label-wrapper">
+            <span class="person-label-title">Phone: </span>{{person.phone}}
+        </div>
+        <div class="person-label-wrapper">
+            <span class="person-label-title">Info: </span>{{person.info}}
+        </div>
+
+        <img class="person-img" src="http://loremflickr.com/130/130/face,girl,boy?random=1" alt="photo">
+
+
+    </div>
+    <div class="person-btn-wrapper" ng-show="person">
+        <span class="btn btn--delete" ng-click="deletePerson()">Удалить</span>
+        <a class="btn btn--change" href="#!/change">Изменить</a>
+    </div>
+    <h3 ng-hide="person">Нет такого контакта</h3>
 </div>
-<h3 ng-hide="person">Нет такого контакта</h3>

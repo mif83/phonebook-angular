@@ -12,7 +12,7 @@ function phoneBook () {
             if (localStorage.phonebook){
                 myFactory.phonebook = JSON.parse(localStorage.phonebook);
             }
-
+            myFactory.phonebook.sort( (a,b) => a.surname > b.surname);
             $scope.myFactory = myFactory;
             myFactory.currentId = -1;
 

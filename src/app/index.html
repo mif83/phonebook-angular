@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>Phonebook</title>
     <script src="bundle.js"></script>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<button class="clear-localstorage" onclick="localStorage.clear(); location='/'" style="padding: 5px">Очистить localstorage</button>
+<div class="phonebook-wrapper">
+    <h2 class="phonebook-title">Менеджер Контактов</h2>
+    <ng-view></ng-view>
+</div>
 
-<ng-view></ng-view>
 
 
 </body>

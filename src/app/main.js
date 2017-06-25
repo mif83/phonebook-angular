@@ -4,6 +4,7 @@ import {} from './directives/search/search';
 import {} from './directives/person/person';
 import {} from './directives/change-person/change-person';
 
+
 app.config(function ($routeProvider) {
     $routeProvider
         .when('/', {

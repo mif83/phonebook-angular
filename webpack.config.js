@@ -1,6 +1,4 @@
-/**
- * Created by user on 23.06.17.
- */
+var ExtractTextPlugin = require ('extract-text-webpack-plugin');
 module.exports = {
     context: __dirname + '/src/app',
     entry: './main.js',
@@ -10,8 +8,11 @@ module.exports = {
     },
     module:{
         loaders:[
-            {test:/\.js$/, loader: 'babel-loader?presets[]=es2015'}
+            {
+                test:/\.js$/,
+                loader: 'babel-loader?presets[]=es2015'
+            }
         ]
     },
     devtool:'source-map'
-}
+};

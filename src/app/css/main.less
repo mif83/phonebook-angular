@@ -1,0 +1,177 @@
+@background-blue: #36d1fe;
+@background-dark-blue:#0005df;
+@text-color-red:#df0000;
+@text-color-black:#000000;
+
+
+body,html{
+  width: 100%;
+  height: 100%;
+}
+.phonebook-wrapper{
+  margin: 0 auto;
+  width: 500px;
+  min-height: 100px;
+  background-color: @background-blue;
+  position: relative;
+
+}
+.phonebook-title{
+  text-align: center;
+}
+// search
+.search-wrapper{
+  position: relative;
+  padding: 0 20px;
+}
+.search-field{
+  padding: 5px 10px;
+  width: 87%;
+}
+.button-new-person{
+  display: block;
+  position: absolute;
+  right: 20px;
+  top:50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: @background-dark-blue;
+  &:hover{
+    color: #000;
+    background-color: lighten(@background-dark-blue, 20%);
+  }
+}
+
+//phonebook
+
+.phonebook{
+  &-list{
+    margin: 10px 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+  }
+  &-item:last-child{
+    .phonebook-link{
+      border-bottom:none;
+    }
+
+  }
+  &-item__number{
+    color: @text-color-red;
+    margin-right: 10px;
+  }
+  &-link{
+    padding:10px 20px;
+    background-color: @background-blue;
+    text-decoration: none;
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 1px solid lighten(@text-color-black, 50%);
+    color: @text-color-black;
+    &:hover{
+      background-color: lighten(@background-blue, 20%);
+    }
+  }
+  &-item__phone{
+    position: absolute;
+    right: 20px;
+    color: lighten(@text-color-black, 20%);
+  }
+}
+
+// persone
+
+.person-wrapper{
+  padding: 10px 20px;
+}
+
+.person-link-home{
+  text-decoration: none;
+  font-size: 36px;
+  position: absolute;
+  top:-5px;
+  color:@text-color-black;
+  &:hover{
+    color:lighten(@text-color-black, 40%);
+  }
+}
+.person-info-wrapper{
+  position: relative;
+}
+.person-label-wrapper{
+  margin:14px 0;
+}
+.person-img{
+  display: block;
+  position: absolute;
+  max-width: 130px;
+  max-height: 130px;
+  border-radius: 50%;
+  box-shadow: 0 0 2px grey;
+  right:20px;
+  top:50%;
+  transform: translateY(-50%);
+}
+.person-label-title{
+  color: lighten(@text-color-black, 40%);
+}
+.btn{
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border-radius: 5px;
+  color:#fff;
+  text-decoration: none;
+  &--delete{
+    background-color: @text-color-red;
+    &:hover{
+      background-color: lighten(@text-color-red, 20%);
+    }
+  }
+  &--change{
+    background-color: @background-dark-blue;
+    &:hover{
+      background-color: lighten(@background-dark-blue, 20%);
+    }
+  }
+  &--save{
+    background-color: @background-dark-blue;
+    &:hover{
+      background-color: lighten(@background-dark-blue, 20%);
+    }
+  }
+}
+
+//change person
+.change-person-wrapper{
+  padding: 10px 20px;
+}
+.change-person-link-home{
+  text-decoration: none;
+  font-size: 36px;
+  position: absolute;
+  top:-5px;
+  color:@text-color-black;
+  &:hover{
+    color:lighten(@text-color-black, 40%);
+  }
+}
+.change-person-label-wrapper{
+  margin:14px 0;
+  label{
+    color: lighten(@text-color-black, 40%);
+  }
+}
+.change-person-input{
+  padding: 5px 10px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
